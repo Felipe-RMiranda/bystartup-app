@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Home from "./views/Home";
-import Login from "./views/Login";
+import Login from "./views/login/Login";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 

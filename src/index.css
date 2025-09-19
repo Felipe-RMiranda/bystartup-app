@@ -50,9 +50,8 @@ button {
 }
 button:hover {
   width: 100%;
-  max-width: 600px;
   box-sizing: border-box;
-  border-color: #646cff;
+  background: #7a89b1;
 }
 button:focus,
 button:focus-visible {

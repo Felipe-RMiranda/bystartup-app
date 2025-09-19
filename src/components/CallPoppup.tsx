@@ -17,7 +17,7 @@ export default function CallPopup({ message, onClose }: PopupProps) {
         border: "1px solid #ffffff",
         boxShadow: "0 2px 16px #0004",
         color: "var(--color-text, #f7f7f7)",
-        background: "#717171ff",
+        background: "#bdbdbdff",
         maxWidth: "90vw",
         wordBreak: "break-word",
         zIndex: 1000,
