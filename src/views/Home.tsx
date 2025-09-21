@@ -10,19 +10,23 @@ type HomeProps = {
   onLogout: () => void;
 };
 
-export default function Home({ user, onLogout }: HomeProps) {
+export default function Home({ user }: HomeProps) {
   const [activePage, setActivePage] = useState<
     "info-tab" | "notebook-tab" | "insights-tab"
   >("info-tab");
 
   const tabComponents: Record<string, React.ReactNode> = {
-    "info-tab": <InfoTab user={user} />,
+    "info-tab": <InfoTab user={user} setActivePage={setActivePage} />,
     "notebook-tab": <NotebookTab />,
     "insights-tab": <InsightsTab />,
   };
 
   const renderTabs = () => {
-    return tabComponents[activePage] ?? <InfoTab user={user} />;
+    return (
+      tabComponents[activePage] ?? (
+        <InfoTab user={user} setActivePage={setActivePage} />
+      )
+    );
   };
 
   return (

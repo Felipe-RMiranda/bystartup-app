@@ -4,7 +4,7 @@ import FormRegister from "../components/form-register/FormRegister";
 import Header from "../components/header/Header";
 
 type LoginProps = {
-  onLogin?: (data: { email: string; phone: string }) => void;
+  onLogin: (data: { email: string; phone: string }) => void;
 };
 
 export default function Login({ onLogin }: LoginProps) {

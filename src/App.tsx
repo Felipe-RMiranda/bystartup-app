@@ -19,7 +19,7 @@ function App() {
       setUser({ name: "Admin", email: data.email, phone: data.phone });
       setIsLoggedIn(true);
     } else {
-      console.log("usuário invalido");
+      alert("usuário invalido");
     }
   };
 
