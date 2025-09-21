@@ -52,13 +52,14 @@ export default function FormRegister({
   const [employeeName, setEmployeeName] = useState("");
   const [email, setEmail] = useState("");
   const [whatsapp, setWhatsapp] = useState("");
-  const [category, setCategory] = useState("P.O.");
+  const [category, setCategory] = useState("");
   const [touched, setTouched] = useState({
     companyName: false,
     cnpj: false,
     employeeName: false,
     email: false,
     whatsapp: false,
+    category: false,
   });
   const [loading, setLoading] = useState(false);
 
@@ -82,6 +83,8 @@ export default function FormRegister({
       touched.whatsapp && whatsapp.replace(/\D/g, "").length < 10
         ? "WhatsApp inválido."
         : "",
+    category:
+      touched.category && !category ? "Categoria inválida." : "",
   };
 
   const formValid = Object.values(errors).every((e) => e === "");
@@ -94,6 +97,7 @@ export default function FormRegister({
       employeeName: true,
       email: true,
       whatsapp: true,
+      category: true,
     });
     if (!formValid) return;
 
@@ -188,16 +192,23 @@ export default function FormRegister({
 
           <div className="form-group">
             <select
+              required
               value={category}
               onChange={(e) => setCategory(e.target.value)}
+              onBlur={() => setTouched((t) => ({ ...t, category: true }))}
             >
-              placeholder="Categoria"
+              <option value="" disabled hidden>
+                Selecione a categoria
+              </option>
               <option value="P.O.">P.O.</option>
               <option value="Jurídico">Jurídico</option>
               <option value="Financeiro">Financeiro</option>
               <option value="Marketing">Marketing</option>
               <option value="T.I.">T.I.</option>
             </select>
+            {errors.category && (
+              <p className="error-message">{errors.category}</p>
+            )}
           </div>
         </div>
       </div>

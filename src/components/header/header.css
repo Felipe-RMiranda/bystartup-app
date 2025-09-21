@@ -1,0 +1,38 @@
+#header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 15px 18px;
+  border: none;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+#icon {
+  width: 100%;
+  max-width: 15vw;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+#right-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  #icon {
+    max-width: 30vw;
+  }
+  #header {
+    padding: 8px 8px;
+  }
+  #content-nav-bar {
+    display: none;
+  }
+}

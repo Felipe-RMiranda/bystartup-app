@@ -1,0 +1,40 @@
+#menu-float-btn {
+  display: inline-block;
+  display: none;
+  width: auto;
+  padding: 0px;
+  margin: auto;
+  background: none;
+  font-size: 2rem;
+  cursor: pointer;
+  outline: none;
+}
+#nav-bar {
+  position: fixed;
+  top: 15vw;
+  right: 5vw;
+  background: #000000d5;
+  box-shadow: 0px 5px 30px #4e1313;
+  border-radius: 8px;
+  z-index: 20;
+  animation: fadeInMenu 0.3s ease forwards;
+  display: none;
+}
+@keyframes fadeInMenu {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 600px) {
+  #menu-float-btn {
+    display: inline-block;
+  }
+  #nav-bar {
+    display: inline-block;
+  }
+}

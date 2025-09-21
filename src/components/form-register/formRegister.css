@@ -1,6 +1,14 @@
+@media (max-width: 600px) {
+  #form-register {
+    max-width: 98vw;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: -1px 2px 20px #ffb6b633;
+  }
+}
 #form-register {
   width: 100%;
-  max-width: 800px;
+  max-width: 80vw;
   box-sizing: border-box;
   background: #ffffffff;
   color: #000000ff;
@@ -8,7 +16,7 @@
   border-radius: 16px;
   box-shadow: -3px 5px 50px #ffb6b66b;
   padding: 32px;
-  margin: 0 auto;
+  margin: 80px 20px 0px 20px;
   display: flex;
   flex-direction: column;
   gap: 16px;
