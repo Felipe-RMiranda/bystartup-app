@@ -2,8 +2,10 @@ import { useState } from "react";
 import Header from "../components/header/Header";
 import type { User } from "../types/User";
 import InfoTab from "../components/tab-info/InfoTab";
-import NotebookTab from "../components/tab-notebook/NotebookTab";
+import AgendaTab from "../components/tab-agenda/AgendaTab";
 import InsightsTab from "../components/tab-insights/InsightsTab";
+import { InfoSummaryFactory } from "../types/IInfoSummaryData";
+import BottomBar from "../components/bottom-bar/BottomBar";
 
 type HomeProps = {
   user: User;
@@ -12,12 +14,12 @@ type HomeProps = {
 
 export default function Home({ user }: HomeProps) {
   const [activePage, setActivePage] = useState<
-    "info-tab" | "notebook-tab" | "insights-tab"
+    "info-tab" | "agenda-tab" | "insights-tab"
   >("info-tab");
 
   const tabComponents: Record<string, React.ReactNode> = {
     "info-tab": <InfoTab user={user} setActivePage={setActivePage} />,
-    "notebook-tab": <NotebookTab />,
+    "agenda-tab": <AgendaTab infoData={InfoSummaryFactory.getList()} />,
     "insights-tab": <InsightsTab />,
   };
 
@@ -30,9 +32,10 @@ export default function Home({ user }: HomeProps) {
   };
 
   return (
-    <div id="contener">
+    <div className="container">
       <Header activePage={activePage} setActivePage={setActivePage} />
       <div id="content">{renderTabs()}</div>
+      <BottomBar activePage={activePage} setActivePage={setActivePage} />
     </div>
   );
 }

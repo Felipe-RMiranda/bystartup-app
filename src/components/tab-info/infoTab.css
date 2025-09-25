@@ -1,7 +1,9 @@
 .info-page {
+  flex: 1;
   width: 100%;
+  height: 95%;
   box-sizing: border-box;
-  margin: 0 auto;
+  margin: 0;
   padding: 24px;
   display: flex;
   flex-direction: column;
@@ -10,10 +12,10 @@
   background: white;
   color: black;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  overflow: hidden;
+  overflow: auto;
 }
 
-.welcome {
+.welcome-info-page {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -23,84 +25,129 @@
   padding: 16px 20px;
   box-sizing: border-box;
 }
-.info-header {
-  width: 100%;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  gap: 16px;
-}
-.info-meeting {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  padding: 16px 20px;
-}
-.title-meeting {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.info-meeting img {
-  width: 20px;
-  height: auto;
-  object-fit: contain;
-  border-radius: 15px;
-  padding: 10px;
-  background: #fff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
-}
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 10px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.logo {
+.logo-info-page {
   width: 50px;
   height: auto;
   object-fit: contain;
   border-radius: 15px;
   padding: 10px;
   background: #fff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 5px 30px #4e131379;
 }
 
-.welcome h2 {
-  font-size: 1.5rem;
-  margin: 0;
+.info-header-info-page {
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  gap: 16px;
 }
-
-.info-section {
-  width: auto;
-  height: 100%;
-  display: inline-block;
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(76, 16, 16, 0.614);
+.grid-info-page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  width: 80%;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
-.info-section h3 {
-  margin: 0;
-  margin-bottom: 12px;
+.section-info-page {
+  display: flex;
+  flex-direction: row;
+  background: transparent;
+  gap: 1rem;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.info-section-info-page {
+  display: flex;
+  flex: 1;
+  gap: 1rem;
+  min-height: 15rem;
+  background: white;
+  color: #350d0d;
+  border: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 2rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 2rem;
+  box-shadow: 0 2px 30px #4e1313;
+  text-shadow: 0 2px 5px #4e1313af;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.bg-service-info-page {
+  flex: 1;
+  min-height: 10rem;
+  border: none;
+  background: transparent;
+  background-image: url(/icons/services.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 0;
+  box-shadow: 0 2px 30px #4e1313;
+  box-sizing: border-box;
+}
+
+.bg-request-info-page {
+  flex: 1;
+  min-height: 10rem;
+  border: none;
+  background: transparent;
+  background-image: url(/icons/request.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 0;
+  box-shadow: 0 2px 30px #4e1313;
+  box-sizing: border-box;
+}
+
+.bg-contracts-info-page {
+  flex: 1;
+  min-height: 10rem;
+  border: none;
+  background: transparent;
+  background-image: url(/icons/contracts.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 0;
+  box-shadow: 0 2px 30px #4e1313;
+  box-sizing: border-box;
+}
+
+.info-section-info-page h1 {
+  margin: 0 2rem;
+  font-size: 2rem;
+}
+
+.info-section-info-page li {
+  margin: 0.2rem 0;
   font-size: 1.2rem;
 }
 
-.info-section p {
+.info-section-info-page p {
   width: auto;
   margin: 4px 0;
   font-size: 0.95rem;
 }
 
-.btn {
+.btn-info-page {
   background: #5d74b6;
   border: none;
   padding: 10px 18px;
@@ -112,70 +159,76 @@
   transition: background 0.3s, transform 0.1s;
 }
 
-.btn:hover {
+.btn-info-page:hover {
   background: #7a89b1;
 }
 
-.btn:active {
+.btn-info-page:active {
   transform: scale(0.97);
 }
-
-.info-section select {
+.section-info-page select {
   display: inline;
-  width: 100%;
+  width: 60%;
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #444;
-  background: #2f2f47;
+  background: #1e1e2f;
   color: #ffffff;
   font-size: 0.95rem;
   margin-top: 8px;
 }
-
-.contrato-info {
+.contrato-info-info-page {
+  color: white;
   margin-top: 16px;
   padding: 12px;
   background: #1e1e2f;
   border-radius: 8px;
   font-size: 0.9rem;
 }
-
-.info-section ul {
+.info-section-info-page ul {
   list-style: none;
   padding-left: 0;
   margin: 0;
 }
-
-.info-section li {
+.info-section-info-page li {
   padding: 8px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   font-size: 0.95rem;
 }
-
-.info-section li:last-child {
+.info-section-info-page li:last-child {
   border-bottom: none;
 }
 
-@media (max-width: 768px) {
-  .welcome {
+@media (max-width: 600px) {
+  .welcome-info-page {
     flex-direction: column;
     align-items: flex-start;
   }
-  #info-page {
+  .info-page {
     padding: 12px;
     gap: 16px;
   }
-
-  .info-header {
+  .info-meeting-info-page {
     flex-direction: column;
-    text-align: center;
   }
-
-  .info-header h2 {
-    font-size: 1.2rem;
+  .info-header-info-page {
+    flex-direction: column;
+    text-align: left;
   }
-
-  .info-section {
-    padding: 16px;
+  .section-info-page {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .info-section-info-page {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 2rem;
+  }
+  .bg-service-info-page,
+  .bg-request-info-page,
+  .bg-contracts-info-page {
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 0;
+    max-height: 10rem;
   }
 }

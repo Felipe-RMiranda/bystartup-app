@@ -4,9 +4,9 @@ import type { Dispatch, SetStateAction } from "react";
 import "./nav-btn.css";
 
 type HeaderProps = {
-  activePage: "info-tab" | "notebook-tab" | "insights-tab";
+  activePage: "info-tab" | "agenda-tab" | "insights-tab";
   setActivePage: Dispatch<
-    SetStateAction<"info-tab" | "notebook-tab" | "insights-tab">
+    SetStateAction<"info-tab" | "agenda-tab" | "insights-tab">
   >;
 };
 

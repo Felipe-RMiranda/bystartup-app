@@ -1,0 +1,20 @@
+.bottom-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: black;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  box-sizing: border-box;
+  padding: 0.2rem 1rem;
+  z-index: 1000; /* fica acima do conteúdo */
+}
+
+@media (max-width: 600px) {
+  .bottom-bar {
+    display: flex;
+  }
+}

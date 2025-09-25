@@ -10,9 +10,9 @@ type LoginProps = {
 export default function Login({ onLogin }: LoginProps) {
   const [showForm, setShowForm] = useState(true);
   return (
-    <div id="contener">
+    <div className="container">
       <Header />
-      <div id="content">
+      <div className="content">
         {showForm ? (
           <FormLogin
             onSwitch={() => setShowForm(false)}

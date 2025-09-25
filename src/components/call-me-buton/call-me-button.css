@@ -1,12 +1,13 @@
 .call-me-btn {
   display: flex;
-  gap: 8px;
+  gap: 5px;
   width: auto;
+  max-height: 5vh;
   background: #e6f632;
-  color: #34372e;
+  color: black;
   border: none;
-  border-radius: 8px;
-  padding: 8px 16px;
+  border-radius: 0.8rem;
+  padding: 8px;
   cursor: pointer;
   font-weight: 600;
   transition: background 0.2s;
@@ -29,10 +30,14 @@ button:focus-visible {
   display: inline-block;
 }
 .call-me-btn img {
-  width: 24px;
-  height: 24px;
+  width: 1.3rem;
+  height: auto;
 }
 @media (max-width: 600px) {
+  .call-me-btn img {
+    width: auto;
+    max-height: 2vh;
+  }
   .callme-text {
     display: none !important;
   }

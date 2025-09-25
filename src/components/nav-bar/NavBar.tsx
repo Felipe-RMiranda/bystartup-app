@@ -2,9 +2,9 @@ import type { Dispatch, SetStateAction } from "react";
 import "./nav-bar.css";
 
 type NavBarProps = {
-  activePage?: "info-tab" | "notebook-tab" | "insights-tab";
+  activePage?: "info-tab" | "agenda-tab" | "insights-tab";
   setActivePage?: Dispatch<
-    SetStateAction<"info-tab" | "notebook-tab" | "insights-tab">
+    SetStateAction<"info-tab" | "agenda-tab" | "insights-tab">
   >;
 };
 
@@ -18,8 +18,8 @@ export default function NavBar({ activePage, setActivePage }: NavBarProps) {
         Home
       </button>
       <button
-        className={activePage === "notebook-tab" ? "active" : ""}
-        onClick={() => setActivePage?.("notebook-tab")}
+        className={activePage === "agenda-tab" ? "active" : ""}
+        onClick={() => setActivePage?.("agenda-tab")}
       >
         Agenda
       </button>

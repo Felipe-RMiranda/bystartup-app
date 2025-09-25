@@ -5,9 +5,9 @@ import NavBar from "../nav-bar/NavBar";
 import NavBtn from "../nav-btn/NavBtn";
 
 type HeaderProps = {
-  activePage?: "info-tab" | "notebook-tab" | "insights-tab";
+  activePage?: "info-tab" | "agenda-tab" | "insights-tab";
   setActivePage?: Dispatch<
-    SetStateAction<"info-tab" | "notebook-tab" | "insights-tab">
+    SetStateAction<"info-tab" | "agenda-tab" | "insights-tab">
   >;
 };
 export default function Header({ activePage, setActivePage }: HeaderProps) {
